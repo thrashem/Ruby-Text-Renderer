@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<style>
+  body {
+    width: 260px;
+    font-family: sans-serif;
+    font-size: 13px;
+    padding: 12px;
+    margin: 0;
+    background: #1a1a2e;
+    color: #ddd;
+  }
+  h2 { margin: 0 0 10px; font-size: 14px; color: #fff; }
+  .add-row { display: flex; gap: 6px; margin-bottom: 12px; }
+  #domain-input {
+    flex: 1;
+    padding: 5px 8px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background: #111;
+    color: #fff;
+    font-size: 12px;
+  }
+  button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  #add-btn { background: #4a9eff; color: #fff; white-space: nowrap; }
+  #add-btn:hover { background: #2a7edf; }
+  #domain-list { list-style: none; padding: 0; margin: 0; }
+  #domain-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+    border-bottom: 1px solid #333;
+  }
+  #domain-list li button {
+    background: #444;
+    color: #aaa;
+    padding: 2px 8px;
+    font-size: 11px;
+  }
+  #domain-list li button:hover { background: #e04040; color: #fff; }
+  .empty { color: #666; font-size: 12px; }
+  .label { color: #aaa; font-size: 11px; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<h2>Ruby Text Renderer</h2>
+<div class="add-row">
+  <input type="text" id="domain-input" placeholder="example.com">
+  <button id="add-btn">追加</button>
+</div>
+<div class="label">有効なサイト一覧</div>
+<ul id="domain-list"></ul>
+
+<script src="popup.js"></script>
+</body>
+</html>
